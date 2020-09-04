@@ -1,23 +1,27 @@
+import React, {useState} from 'react'
 import useLightMode from '../hooks/lightMode'
 
-const Navbar = () => {
-    const [darkMode, setDarkMode] = useDarkmode(false);
+
+
+
+const lightMode = () => {
+    const [lightMode, setLightMode] = uselightMode(false);
     const toggleMode = e => {
       e.preventDefault();
-      document.body.classList.toggle("dark-mode")
-      setDarkMode(!darkMode);
+      document.body.classList.toggle("light-mode")
+      setLightMode(!lightMode);
     };
     return (
       <nav className="navbar">
         <h1>Crypto Tracker</h1>
-        <div className="dark-mode__toggle">
+        <div className="light-mode__toggle">
           <div
             onClick={toggleMode}
-            className={darkMode ? 'toggle toggled' : 'toggle'}
+            className={lightMode ? 'toggle toggled' : 'toggle'}
           />
         </div>
       </nav>
     );
   };
   
-  export default Navbar;
+  export default lightMode;

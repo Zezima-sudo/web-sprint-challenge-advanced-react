@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
+import useLightMode from '../hooks/lightMode'
+
 
 export default class PlantList extends Component {
   // add state with a property called "plants" - initialize as an empty array
@@ -29,6 +31,7 @@ constructor() {
   render() {
     return (
       <main className="plant-list">
+      
         {this.state?.plants?.map((plant) => (
           <div className="plant-card" key={plant.id}>
             <img className="plant-image" src={plant.img} alt={plant.name} />
