@@ -6,7 +6,8 @@ export default class PlantList extends Component {
 constructor() {
   super()
   this.state = ({
-    plants: []
+    plants: [],
+    
   })
 }
   // when the component mounts:
@@ -49,7 +50,10 @@ constructor() {
             </div>
           </div>
         ))}
+
+
       </main>
-    );
+
+    )
   }
 }
